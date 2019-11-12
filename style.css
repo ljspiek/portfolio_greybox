@@ -1,0 +1,33 @@
+nav {
+    border: black solid 1px;
+}
+
+.introduction {
+    background-color: grey;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap: 1em;
+    border: grey solid 1px;
+}
+
+.grid-bio {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    border: black solid 1px;
+}
+
+.heading-project, .heading-bio {
+    padding-left: 200px;
+    font-weight: bold;
+}
+
+.bio-text {
+    background-color: white;
+}
+
+[class$="align"] {
+    background-color: lightgrey;
+}
