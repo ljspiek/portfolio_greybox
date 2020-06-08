@@ -1,33 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #1c1c26;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+}
+
+h4 {
+  margin: 0;
+}
+
+.icon {
+  height: 40px;
+  filter: brightness(0) saturate(100%) invert(84%) sepia(44%) saturate(1772%)
+    hue-rotate(160deg) brightness(94%) contrast(79%);
+}
+
+.list-icons-contact {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #ebeff2;
+}
+
+.icons-contact {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 nav {
-    border: black solid 1px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: black;
 }
 
-.introduction {
-    background-color: grey;
+.hamburger {
+  cursor: pointer;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-gap: 1em;
-    border: grey solid 1px;
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #ebeff2;
+  margin: 3px;
+  cursor: pointer;
 }
 
-.grid-bio {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    border: black solid 1px;
+.nav a {
+  color: #ebeff2;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-.heading-project, .heading-bio {
-    padding-left: 200px;
-    font-weight: bold;
+.logo {
+  color: #ebeff2;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 18px;
+}
+
+.connect {
+  text-align: center;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.graphic-container {
+  background-color: black;
+}
+
+.tagline-intro {
+  background: black;
+  border: black solid 1px;
+  color: #ebeff2;
+  text-align: center;
+}
+
+.bio {
+  background: black;
+}
+
+.bio,
+.bio-text {
+  padding: 20px;
 }
 
 .bio-text {
-    background-color: white;
+  background: rgb(255, 255, 255);
 }
 
-[class$="align"] {
-    background-color: lightgrey;
+.heading-bio {
+  color: #ebeff2;
+}
+
+[class^="project"] {
+  background-color: #ebeff2;
+}
+
+.projects {
+  background: rgb(235, 239, 242);
+
+  padding: 20px;
+}
+
+[class$="description"] {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+[class$="text"] {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.app-pic {
+  width: 100%;
+  border: #ebeff2 solid 20px;
+}
+
+.language-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  color: gray;
+  font-size: 11px;
+  width: 100%;
+}
+
+.language-container {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  height: 60px;
+  background: grey;
+}
+
+.devicon-github-plain-wordmark {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav-links {
+  margin-top: 10px;
+  z-index: 1;
+  position: absolute;
+  padding: 0;
+  right: 0px;
+  height: 92vh;
+  top: 8vh;
+  background: black;
+
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.list-icons-contact {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 551px) and (max-width: 1024px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    list-style: none;
+    cursor: pointer;
+    transform: translateX(0%);
+    position: static;
+    height: 100%;
+    background: black;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  .language-container {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    list-style: none;
+    cursor: pointer;
+    transform: translateX(0%);
+    position: static;
+    height: 100%;
+    background: black;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .language-container {
+    font-size: 16px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 1em;
+  }
+
+  .grid-bio {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  .heading-project,
+  .heading-bio {
+    padding-left: 200px;
+    font-weight: bold;
+  }
 }
